@@ -6,6 +6,7 @@ const connectDB = require("./config/db");
 const authRoutes = require("./routes/authRoutes.js");
 const lessonRoutes = require("./routes/lessonsRoutes.js"); 
 const vocabularyRoutes = require("./routes/vocabularyRoutes.js"); 
+const userManagementRoutes = require("./routes/userManagementRoutes.js"); 
 
 const app = express();
 connectDB();
@@ -17,6 +18,7 @@ app.use(express.json());
 app.use("/auth", authRoutes);
 app.use("/lessons", lessonRoutes);
 app.use("/vocabulary", vocabularyRoutes);
+app.use("/users", userManagementRoutes);
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

@@ -20,7 +20,7 @@ exports.addVocabulary = async (req, res) => {
   
       res.status(201).json({ message: "Vocabulary added successfully", vocabulary });
     } catch (error) {
-      console.error("Error adding vocabulary:", error); // Log the error details
+      console.error("Error adding vocabulary:", error);
       res.status(500).json({ message: "Server error", error: error.message });
     }
   };
