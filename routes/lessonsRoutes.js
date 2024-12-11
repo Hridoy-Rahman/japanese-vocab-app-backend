@@ -10,6 +10,4 @@ router.get("/", getLessons);
 router.put("/:lessonId", updateLesson);
 router.delete("/:lessonId", deleteLesson);
 
-
-
 module.exports = router;
